@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>store</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- This is for the servlet that logins a customer.-->
+  <servlet>
+  	<servlet-name>UserLogin</servlet-name>
+  	<servlet-class>servlets.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserLogin</servlet-name>
+  	<url-pattern>/servlet/login</url-pattern>
+  </servlet-mapping>
+  
+  <!-- This is for the servlet that submits a comment.-->
+  <servlet>
+  	<servlet-name>submitComment</servlet-name>
+  	<servlet-class>servlets.CommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>submitComment</servlet-name>
+  	<url-pattern>/servlet/comment</url-pattern>
+  </servlet-mapping>
+  
+  <!-- This is for the servlet that updates customer info.-->
+  <servlet>
+  	<servlet-name>updateMemberInfo</servlet-name>
+  	<servlet-class>servlets.UpdateMemberInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>updateMemberInfo</servlet-name>
+  	<url-pattern>/servlet/updateMemberInfo</url-pattern>
+  </servlet-mapping>
+  
+   <!-- This is the servlet that resgisters a member .-->
+  <servlet>
+  	<servlet-name>registerMember</servlet-name>
+  	<servlet-class>servlets.NewMemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>registerMember</servlet-name>
+  	<url-pattern>/servlet/register</url-pattern>
+  </servlet-mapping>
+  
+    <!-- This is the servlet that adds a item to the shopping basket.-->
+  <servlet>
+  	<servlet-name>addABook</servlet-name>
+  	<servlet-class>servlets.AddToBasketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>addABook</servlet-name>
+  	<url-pattern>/servlet/addToBasket</url-pattern>
+  </servlet-mapping>
+  
+  <!-- This is the servlet that removes a item from the shopping basket.-->
+  <servlet>
+  	<servlet-name>removeItem</servlet-name>
+  	<servlet-class>servlets.RemoveFromBasketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>removeItem</servlet-name>
+  	<url-pattern>/servlet/removeItem</url-pattern>
+  </servlet-mapping>
+  
+    <!-- This is the servlet that checks out the user and items in the basket .-->
+  <servlet>
+  	<servlet-name>CheckOut</servlet-name>
+  	<servlet-class>servlets.CheckOutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CheckOut</servlet-name>
+  	<url-pattern>/servlet/buy</url-pattern>
+  </servlet-mapping>
+  
+      <!-- This is the servlet that searches the book store for a specific keyword .-->
+  <servlet>
+  	<servlet-name>Search</servlet-name>
+  	<servlet-class>servlets.ProductSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Search</servlet-name>
+  	<url-pattern>/servlet/search</url-pattern>
+  </servlet-mapping>
+
+  
+  
+</web-app>
